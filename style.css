@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code&display=swap');
+
+* {
+    font-family: 'Fira Code', monospace;
+    padding: 0;
+    margin: 0;
+}
+
+/* NAVIGATION */
+
+    /* TOP NAV */
+nav {
+    /* position: fixed;  */
+    top: 0; 
+    left: 0; 
+    z-index: 9999; 
+    width: 100%;
+    background-color: #fff;
+}
+
+ul.nav {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+    padding-bottom: 5vh;
+}
+
+.nav-btn {
+    background-color: #fff;
+    color: black;
+    font-weight: bold;
+    border: none;
+    font-size: large;
+    padding: 1em;
+}
+
+    /* SIDEBAR */
+
+@media screen and (max-width: 992px) {
+    .sidebar {
+        visibility: hidden;
+    }
+}
+
+.sidebar {
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 225px;
+    height: 100%;
+    padding: 20px 0;
+    transition: all .5s ease-in-out;
+}
+
+/* .sidebar {
+    display: flex;
+} */
+
+/* CONTENT */
+
+.content {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 5vh;
+}
+
+.section {
+    height: 100vh;
+    width: 50%;
+}
