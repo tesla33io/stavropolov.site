@@ -21,30 +21,18 @@ $(window).scroll(function(event){
         // scroll down
         if ($('.nav').isInViewport())
         {
-            $('.sidebar').css("display", "none");
-            // $('.nav').css("display", "flex");
+            $('.sidebar').removeClass('active');
         } else {
-            $('.sidebar').css("display", "flex");
-            // $('.nav').css("display", "none");
+            $('.sidebar').addClass('active');
         }
     } else {
         // scroll up
-        if ($('#nav').isInViewport())
+        if ($('.nav').isInViewport())
         {
-            $('.sidebar').css("display", "none");
-            // $('.nav').css("display", "flex");
+            $('.sidebar').removeClass('active');
         } else {
-            $('.sidebar').css("display", "flex");
-            // $('.nav').css("display", "none");
+            $('.sidebar').addClass('active');
         }
     }
     lastScrollTop = st;
 });
-// $(window).bind('mousewheel', function(event) {
-//     if (event.originalEvent.wheelDelta >= 0) {
-//         console.log('up');
-//     }
-//     else {
-        
-//     }
-//     });

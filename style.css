@@ -18,7 +18,7 @@ nav {
     background-color: #fff;
 }
 
-ul.nav {
+nav {
     list-style-type: none;
     display: flex;
     justify-content: space-around;
@@ -45,22 +45,31 @@ ul.nav {
 }
 
 .sidebar {
-    display: none;
+    display: flex;
+
     flex-direction: column;
     justify-content: space-around;
 
     position: fixed;
     top: 0;
-    left: 0;
+    left: -10rem;
     width: 225px;
     height: 100%;
     padding: 20px 0;
-    transition: all .5s ease-in-out;
+
+    transition: all .1s ease-in-out;
 }
 
-/* .sidebar {
+.sidebar.active {
     display: flex;
-} */
+
+    flex-direction: column;
+    justify-content: space-around;
+
+    left: 0;
+
+    transition: all .1s ease-in-out;
+}
 
 /* CONTENT */
 
@@ -71,12 +80,72 @@ ul.nav {
     justify-content: center;
 }
 
-.section-header {
-    text-align: center;
-    margin-bottom: 5vh;
-}
-
 .section {
     height: 100vh;
     width: 50%;
+}
+
+@media screen and (max-width: 992px) {
+    .section {
+        width: 90%;
+    }
+}
+
+    /* SKILLS TABLE */
+
+.skills-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.skills-table thead tr {
+    text-align: left;
+}
+
+.skills-table tr {
+    border-bottom: 1px solid #aaa;
+}
+
+.skills-table td {
+    padding-top: .3em;
+    padding-bottom: .3em;
+}
+
+.skills-table tbody tr:last-of-type {
+    border-bottom: none;
+}
+
+.advanced, .medium {
+    display: inline-block;
+
+    color: white;
+    background-image: url('src/svg/iconmonstr-info-6.svg');
+    background-repeat: no-repeat;
+    width: 1.1em;
+    height: 1.1em;
+    border-radius: 50%;
+    text-align: center;
+    vertical-align: middle;
+    fill: darkgreen !important;
+}
+
+.tooltip {
+    visibility: hidden;
+    position: absolute;
+    z-index: 1;
+    width: 100px;
+    color: white;
+    font-size: 12px;
+    background-color: #192733;
+    border-radius: 10px;
+    padding: 10px 15px 10px 15px;
+    right: 50%;
+}
+
+.advanced:hover .tooltip {
+    visibility: visible;
+}
+
+.medium:hover .tooltip {
+    visibility: visible;
 }
