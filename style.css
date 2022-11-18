@@ -4,6 +4,8 @@
     font-family: 'Fira Code', monospace;
     padding: 0;
     margin: 0;
+
+    --grid-gap: 10em;
 }
 
 /* NAVIGATION */
@@ -115,37 +117,101 @@ nav {
     border-bottom: none;
 }
 
-.advanced, .medium {
-    display: inline-block;
-
-    color: white;
-    background-image: url('src/svg/iconmonstr-info-6.svg');
-    background-repeat: no-repeat;
-    width: 1.1em;
-    height: 1.1em;
-    border-radius: 50%;
-    text-align: center;
-    vertical-align: middle;
-    fill: darkgreen !important;
+.skills-hint {
+    font-size: small;
+    padding-bottom: .3em;
 }
 
-.tooltip {
-    visibility: hidden;
-    position: absolute;
-    z-index: 1;
-    width: 100px;
-    color: white;
-    font-size: 12px;
-    background-color: #192733;
-    border-radius: 10px;
-    padding: 10px 15px 10px 15px;
-    right: 50%;
+    /* EXPERIENCE */
+
+.cases {
+    display: grid;
+    gap: var(--grid-gap);
+    grid-auto-flow: column;
+    grid-auto-columns: 61%;
+
+    overflow-x: auto;
+    overscroll-behavior-inline: contain;
+
+    scroll-snap-type: inline mandatory;
+    scroll-padding-inline: 1em;
+
+    /* padding: 25vh 0; */
+    -webkit-transform: translateY(50%);
+    -ms-transform: translateY(50%);
+    transform: translateY(50%);
 }
 
-.advanced:hover .tooltip {
-    visibility: visible;
+.cases > * {
+    scroll-snap-align: start;
 }
 
-.medium:hover .tooltip {
-    visibility: visible;
+.case {
+    border: 1px solid #192733;
+    border-radius: 0.5em;
+    padding: 1em;
+    margin: .5em;
+    width: 99%;
+}
+
+@media screen and (max-width: 992px) {
+    .case {
+        width: 80%;
+    }
+
+    .cases {
+        grid-auto-columns: 100%;
+    }
+}
+
+.name {
+    padding-bottom: 0.5em;
+}
+
+.status {
+    padding-bottom: 1em;
+    font-size: small;
+}
+
+.status::before {
+    content: 'Status: ';
+}
+
+.description {
+    padding-bottom: 1em;
+}
+
+.case-link {
+    text-decoration: none;
+}
+
+    /* CONTACTS */
+
+.contacts-list {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    height: 90%;
+    /* align-items: flex-end; */
+}
+
+.links, .labels {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    /* align-items: flex-end; */
+    /* gap: 1em; */
+}
+
+.contact {
+    font-size: xx-large;
+    text-decoration: none;
+    color: black;
+}
+
+.contact-label {
+    font-size: large;
+    text-decoration: none;
+    color: black;
 }

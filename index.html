@@ -5,10 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>tesla33io</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="style.css">
     <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
 </head>
 <body>
+     <div class="app"></div>
     <section id="nav-top"></section>
     <nav class="nav">
         <button class="nav-btn" onclick="smoothScroll('#me')">Me.</button>
@@ -30,6 +32,9 @@
         </div>
         <div class="section" id="skills">
             <h1>Skills</h1>
+            <p class="skills-hint">Advanced - I have experience working with this technology for 2 or more years</p>
+            <p class="skills-hint">Intermediate - I have experience working with this technology from 1 to 2 years</p>
+            <p class="skills-hint">Beginner - I have experience working with this technology less than a year</p>
             <table class="skills-table">
                 <thead>
                     <tr>
@@ -40,24 +45,89 @@
                 <tbody>
                     <tr>
                         <td>Python (3.x)</td>
-                        <td><span class="advanced"><span class="tooltip">I have experience working with this technology for 2 or more years</span></span> Advanced</td>
+                        <td>Advanced</td>
+                    </tr>
+                    <tr>
+                        <td>HTML & CSS</td>
+                        <td>Advanced</td>
+                    </tr>
+                    <tr>
+                        <td>Linux (Ubuntu)</td>
+                        <td>Advanced</td>
+                    </tr>
+                    <tr>
+                        <td>GIT (GitHub)</td>
+                        <td>Advanced</td>
                     </tr>
                     <tr>
                         <td>Django</td>
-                        <td><span class="medium"><span class="tooltip">I have experience working with this technology from 1 to 2 years</span></span>  Medium</td>
+                        <td>Intermediate</td>
+                    </tr>
+                    <tr>
+                        <td>Flask</td>
+                        <td>Intermediate</td>
+                    </tr>
+                    <tr>
+                        <td>MongoDB</td>
+                        <td>Intermediate</td>
+                    </tr>
+                    <tr>
+                        <td>PostgreSQL</td>
+                        <td>Intermediate</td>
+                    </tr>
+                    <tr>
+                        <td>Bootstrap</td>
+                        <td>Intermediate</td>
+                    </tr>
+                    <tr>
+                        <td>C#</td>
+                        <td>Beginner</td>
+                    </tr>
+                    <tr>
+                        <td>Unity</td>
+                        <td>Beginner</td>
+                    </tr>
+                    <tr>
+                        <td>JavaScript</td>
+                        <td>Beginner</td>
                     </tr>
                 </tbody>
             </table>
         </div>
         <div class="section" id="exp">
             <h1>Experience</h1>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam nulla molestias hic labore molestiae minima. In nam tempore quos voluptatum distinctio quo doloribus atque, consequuntur vel! Dicta quidem quisquam repudiandae.
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Modi ex ut cum inventore quis, qui nobis mollitia ducimus hic alias officiis impedit. Ratione, tenetur voluptatibus? Expedita numquam alias dolorem quas.
+            <div class="cases">
+                <div class="case">
+                    <h2 class="name">Diahelp</h2>
+                    <p class="status">Inactive</p>
+                    <p class="description">Telegram bot, the main purpose of which is to make life easier for people with diabetes. The main functionality is the storage and manipulation of blood sugar indicators.</p>
+                    <a href="https://t.me/dia_help_bot" target="_blank" class="case-link">Bot link</a>
+                </div>
+                <div class="case">
+                    <h2 class="name">Dialife</h2>
+                    <p class="status">Under development</p>
+                    <p class="description">The site is an analogue of a Telegram bot. The functionality is the same, but an additionally implemented chart containing a graphic display of sugar indicators for the current day. At the moment, the development is not finished.</p>
+                    <a href="https://dialife.herokuapp.com" target="_blank" class="case-link">Website link</a>
+                </div>
+            </div>
         </div>
         <div class="section" id="contacts">
             <h1>Contacts</h1>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corporis, vitae. Adipisci eos optio veritatis, laboriosam ad temporibus consectetur amet, earum, mollitia vero odit porro voluptatum est doloremque libero quibusdam fugiat.
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta perspiciatis incidunt enim quaerat impedit cum dolorem necessitatibus libero, corrupti at asperiores doloremque nisi quae maiores sunt commodi rerum provident. Provident.
+            <div class="contacts-list">
+                <div class="links">
+                    <a href="mailto:artemstavropolov@gmail.com" target="_blank" id="email" class="fa-regular fa-envelope contact"></a>
+                    <a href="https://t.me/tesla33io" target="_blank" id="telegram" class="fa-brands fa-telegram contact"></a>
+                    <a href="https://www.linkedin.com/in/artem-stavropolov-326418244" target="_blank" id="linkedin" class="fa-brands fa-linkedin contact"></a>
+                    <a href="https://github.com/tesla33io" target="_blank" id="github" class="fa-brands fa-github contact"></a>
+                </div>
+                <div class="labels">
+                    <a href="mailto:artemstavropolov@gmail.com" target="_blank" class="contact-label">email</a>
+                    <a href="https://t.me/tesla33io" target="_blank" class="contact-label">telegram</a>
+                    <a href="https://www.linkedin.com/in/artem-stavropolov-326418244" target="_blank" class="contact-label">linkedin</a>
+                    <a href="https://github.com/tesla33io" target="_blank" class="contact-label">github</a>
+                </div>
+                
+            </div>
         </div>
     </div>
     <script src="index.js"></script>
