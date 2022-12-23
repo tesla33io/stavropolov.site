@@ -1,0 +1,19 @@
+body {
+    background-color: #ffffff;
+    background: linear-gradient(135deg, #cfa31255 25%, transparent 25%) -20px 0/ 40px 40px, linear-gradient(225deg, #cfa312 25%, transparent 25%) -20px 0/ 40px 40px, linear-gradient(315deg, #cfa31255 25%, transparent 25%) 0px 0/ 40px 40px, linear-gradient(45deg, #cfa312 25%, #ffffff 25%) 0px 0/ 40px 40px;
+}
+
+
+p {
+    color: wheat;
+    padding: 1em;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background:green;
+    text-align: center;
+
+    border-radius: 15px;
+    box-shadow: 0 0 50px 3px grey;
+}
